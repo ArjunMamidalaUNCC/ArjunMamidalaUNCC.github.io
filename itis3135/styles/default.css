@@ -1,0 +1,35 @@
+body {
+    background-color: yellow;
+    text-align: center;
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav > a {
+    color: antiquewhite;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: orange;
+    text-decoration: line;
+}
+
+main {
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 65%;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+}
