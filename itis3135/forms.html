@@ -26,13 +26,13 @@
         <h2> ITIS 3135 Forms </h2>
         <p>This is all the content for my ITIS 3135 class</p>
 
-        <form>
+        <form action="#">
             <label for="name">Name: </label></br>
-            <input type="text" name="username" id="name">
+            <input type="text" name="username" id="name" required placeholder="Full name"></br>
             <label for="number">Phone number: </label></br>
-            <input type="text" name="number" id="number">
+            <input type="text" name="number" id="number" required placeholder="Phone number"></br>
             <label for="email">Email address: </label></br>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" required placeholder="Email address"></br>
 
             <label for="name">Gender: </label></br>
             <input type="radio" name="gender" id="gender">
@@ -54,6 +54,18 @@
             <label for="online">Online</label></br>
             <input type="checkbox" id="Other" name="Other">
             <label for="Other">Other</label></br>
+
+            <label for="reasonforvisit">Reason for Visit: </label>
+            <select id="reasonforvisit" name="reasonforvisit" required>
+                <option value="Forfun">For fun</option>
+                <option value="findoutmore">To find out more about what we do</option>
+                <option value="app">To schedule an appointment with us</option>
+                <option value="purchase">To purchase something from us</option>
+            </select>
+
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Reset"/>
+
 
 
 
