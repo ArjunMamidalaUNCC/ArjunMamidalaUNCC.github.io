@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adorable Mammal || ITIS 3135 || BYO Intro Page</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"> 
+    </header>
+    <main>
+        <h2> ITIS 3135 BYO Intro Page </h2>
+        <p>This is all the content for my ITIS 3135 class</p>
+        <h3>"Time to BYO Intro page, please fill out the form below so we can create your own page."</h3>
+        <form>
+                <label for="name">Name: </label>
+                <input type="text" name="username" id="name" required placeholder="Full name"></br>
+                <label for="mascot">Mascot: </label>
+                <input type="text" name="mascot" id="mascot" required placeholder="Mascot"></br>
+                <label for="file">Image: </label>
+                <input type="file" name="image" id="image" required placeholder="Image"></br>
+                <label for="imgcap">Image Caption: </label>
+                <input type="text" name="imgcap" id="imgcap" required placeholder="Image Caption"></br>
+                <label for="perback">Personal Background: </label>
+                <input type="text" name="perback" id="perback" required placeholder="Personal Background"></br>
+                <label for="profback">Professional Background: </label>
+                <input type="text" name="perback" id="perback" required placeholder="Personal Background"></br>
+                <label for="acback">Academic Background: </label>
+                <input type="text" name="acback" id="acback" required placeholder="Academic Background"></br>
+                <label for="backweb">Background in Web Development: </label>
+                <input type="text" name="back" id="back" required placeholder="webdev"></br>
+                <label for="primplat">Primary Computer Platform: </label>
+                <input type="text" name="primplat" id="primplat" required placeholder="primplat"></br>
+                <button type="button">Add Course: </button>
+                <label for="funnything">Funny thing: </label>
+                <input type="text" name="funnything" id="funnything" required placeholder="funnything"></br>
+                <label for="anythingelse">Anything else: </label>
+                <input type="text" name="anythingelse" id="anythingelse" required placeholder="anythingelse"></br>
+                <label for="understood">I understand that what is on this page is not password protected and I will not put anything here that I dont want publicly available. </label>
+                <input type="checkbox" name="understood" id="understood" required placeholder="understood"></br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+        </form>
+
+    </main>
+    <footer>
+        <div data-include="components/footer.html">
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+
+</html>
