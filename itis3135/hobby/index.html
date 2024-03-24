@@ -28,12 +28,12 @@
     <header>
         <heading1>Working out</heading1>
         <nav>
-            <a href="#what" onclick="myFunction('what')">Homepage</a>
-            <a href="#who" onclick="myFunction('who')">About me</a>
-            <a href="#when" onclick="myFunction('when')">Best Times to Workout</a>
-            <a href="#where" onclick="myFunction('where')">Best Locations</a>
-            <a href="#how" onclick="myFunction('how')">How</a>
-            <a href="#why" onclick="myFunction('why')">Why workout?</a>
+            <a href="#what">Homepage</a>
+            <a href="#who">About me</a>
+            <a href="#when">Best Times to Workout</a>
+            <a href="#where">Best Locations</a>
+            <a href="#how">How</a>
+            <a href="#why">Why workout?</a>
         </nav>
     </header>
     <main>
@@ -106,12 +106,26 @@
              document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
      </script>
      <script src="scripts/HTMLInclude.min.js">
-        function myFunction(id) {
-            document.querySelectorAll('selection').forEach((section) => {
-                section.classList.remove('active');
+        document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            
+            const targetSection = document.querySelector(e.target.getAttribute('href'));
+            const allSections = document.querySelectorAll('main section');
+            
+            // Hide all sections
+            allSections.forEach(section => {
+                section.classList.add('hidden');
             });
-            document.getElementById(id).classList.add('active');
-        }
+            
+            // Show the target section only
+            targetSection.classList.remove('hidden');
+        });
+    });
+});
      </script>
 </body>
 
