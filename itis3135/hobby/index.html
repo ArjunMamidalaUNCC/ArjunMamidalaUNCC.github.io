@@ -11,7 +11,7 @@
             background-color: white;
             color: black;
         }
-        section {
+        section.hidden {
             display: none;
         }
         section.active {
@@ -111,9 +111,11 @@
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default anchor behavior
+            e.preventDefault(); 
+            // Prevent default anchor behavior
             
-            const targetSection = document.querySelector(e.target.getAttribute('href'));
+            const targetSectionId = e.target.getAttribute('href').substring(1); // Remove the '#' to get the ID
+            const targetSection = document.getElementById(targetSectionId);
             const allSections = document.querySelectorAll('main section');
             
             // Hide all sections
@@ -122,7 +124,9 @@
             });
             
             // Show the target section only
-            targetSection.classList.remove('hidden');
+            if(targetSection) {
+                targetSection.classList.remove('hidden');
+            }
         });
     });
 });
