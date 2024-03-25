@@ -166,6 +166,10 @@
            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
              </a> 
+             <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                 </a> 
+             
     </footer>
     <script>
         document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
@@ -175,30 +179,30 @@
      </script>
      <script src="scripts/HTMLInclude.min.js"></script>
      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            // Prevent default anchor behavior
-            
-            const targetSectionId = e.target.getAttribute('href').substring(1); // Remove the '#' to get the ID
-            const targetSection = document.getElementById(targetSectionId);
-            const allSections = document.querySelectorAll('main section');
-            
-            // Hide all sections
-            allSections.forEach(section => {
-                section.classList.add('hidden');
-            });
-            
-            // Show the target section only
-            if(targetSection) {
-                targetSection.classList.remove('hidden');
-            }
-        });
+            document.addEventListener('DOMContentLoaded', () => {
+                const navLinks = document.querySelectorAll('nav a');
+                
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault(); 
+                        // Prevent default anchor behavior
+                        
+                        const targetSectionId = e.target.getAttribute('href').substring(1); // Remove the '#' to get the ID
+                        const targetSection = document.getElementById(targetSectionId);
+                        const allSections = document.querySelectorAll('main section');
+                        
+                        // Hide all sections
+                        allSections.forEach(section => {
+                            section.classList.add('hidden');
+                        });
+                        
+                        // Show the target section only
+                        if(targetSection) {
+                            targetSection.classList.remove('hidden');
+                        }
+                    });
+                });
     });
-});
      </script>
 </body>
 
